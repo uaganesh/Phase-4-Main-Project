@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Add New Employee</h3>
+    <form [formGroup]="empRef" (ngSubmit)="storeEmp()">
+        <input 
+        type="number" 
+        placeholder="Enter Employee ID" 
+        formControlName="id"
+        ngModel
+        required
+        >&nbsp;
+        <input type="text" placeholder="Enter First Name" formControlName="first_name">&nbsp;
+        <input type="text" placeholder="Enter Last Name" formControlName="last_name">&nbsp;
+        <input type="text" placeholder="Enter Email" formControlName="email"><br><br>
+        <input type="submit" value="ADD EMPLOYEE" class="btn btn-success">
+    </form>
+    <br>
+    <h3>Employee Details</h3><br>
+    <table class="table table-bordered">
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Second Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">View Details</th>
+        </tr>
+        <tr *ngFor="let employee of employees">
+            <th scope="row">{{employee.id}}</th>
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+            <td>{{employee.email}}</td>
+            <td><input type="button" value="VIEW DETAILS" (click)="viewDetails(employee)"></td>
+        </tr>
+    </table>
+</div>
+

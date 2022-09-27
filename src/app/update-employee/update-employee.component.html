@@ -1,0 +1,15 @@
+<div>
+    <h4 class="font-weight-bold">Update Details of {{employee.first_name}}</h4><br>
+    <form [formGroup]="empuRef" (ngSubmit)="updateEmpDetails()">
+        Employee ID
+        <input type="number" [(ngModel)]=employee.id formControlName="id" readonly>
+        First Name
+        <input type="text" [(ngModel)]=employee.first_name formControlName="first_name">
+        Last Name
+        <input type="text" [(ngModel)]=employee.last_name formControlName="last_name">
+        Email 
+        <input type="text" [(ngModel)]=employee.email formControlName="email"><br><br>
+        <input type="submit" class="btn btn-success" value="UPDATE EMPLOYEE" >
+    </form>
+    <input type="button" class="btn btn-link" value="Back To Home" (click)="ViewAll()"/>&nbsp;
+</div>

@@ -1,0 +1,10 @@
+.container {
+    position: absolute;
+    background-image: linear-gradient(rgb(139, 165, 127), white);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    font-family:Franklin Gothic Medium;
+  }
